@@ -91,7 +91,102 @@ body {
   list-style: none;
   z-index: 10;
 }
+/* Navbar Styles */
+.nav-container {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.nav-list {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3b82f6; /* Blue color on hover */
+}
+
+.dropdown-icon {
+  margin-left: 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 12rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu-item:hover {
+  background-color: #f3f4f6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-item {
+    position: static;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background-color: #f9fafb;
+  }
+}
 .dropdown-menu li {
   padding: 8px 16px;
 }
@@ -130,10 +225,11 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #9333EA, #EC4899, #F97316);
+  background: linear-gradient(to right, rgb(134, 54, 248), rgb(240, 32, 179), rgb(248, 71, 94), rgb(255, 148, 33));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
 }
 
 .hero-subtitle {
@@ -431,7 +527,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 16px;
-  color: #2D3748;
+  color: black;
 }
 
 .link-column ul {
@@ -443,14 +539,15 @@ body {
 }
 
 .link-column a {
-  text-decoration: none;
-  color: #4A5568;
+  text-decoration: none; 
+  color: black;
   font-size: 14px;
   transition: color 0.2s ease;
 }
 
 .link-column a:hover {
-  color: #f97316;
+  /* color: #f97316; */
+  text-decoration: underline ;
 }
 
 .social-links {
@@ -485,7 +582,8 @@ body {
   margin-top: 60px;
   padding-top: 20px;
   border-top: 1px solid #E2E8F0;
-  color: #718096;
+  color: black
+  ;
   font-size: 14px;
 }
 
@@ -591,4 +689,77 @@ body {
   .tag {
     font-size: 12px;
   }
+}
+
+.appscale-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  min-height: 100px;
+}
+
+.award-card {
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.award-image {
+  max-width: 400px;
+  height: 300px;
+  display: block;
+  border-radius: 2px;
+}
+
+.description-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #00cc00;
+  font-weight: bold;
+}
+
+
+.idea-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fcfcfc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.idea-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.idea-description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.idea-button {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.idea-button:hover {
+  background-color: #333;
+  transform:scale(1.1);
 }

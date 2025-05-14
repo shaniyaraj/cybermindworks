@@ -1,13 +1,15 @@
 import { useState } from 'react';
-import './Contact.css'
+import './Careers.css'
 
-export default function ContactForm() {
+export default function Careers() {
   const [formData, setFormData] = useState({
     name: '',
     contact: '',
     email: '',
-    company: '',
-    message: ''
+    applying : '',
+    resume: '',
+    link:'',
+    
   });
 
   const handleChange = (e) => {
@@ -27,8 +29,10 @@ export default function ContactForm() {
       name: '',
       contact: '',
       email: '',
-      company: '',
-      message: ''
+      applying: '',
+      resume: '',
+      link:'',
+     
     });
   };
 
@@ -37,20 +41,10 @@ export default function ContactForm() {
         {/* Contact Form Section */}
       <div className="form-container">
         <div className="form-header">
-         <h1 className="form-title">Let's talk</h1>
+         <h1 className="form-title">Work with us</h1>
           <p className="form-subtitle">
-            Fill out the form or write to us at:{' '}
-            <a href="mailto:contact@cybermindworks.com" className="email-link">
-              contact@cybermindworks.com
-            </a>
+           Fill in the form and our team will get back to you
           </p>
-           {/* <h1 className="text-3xl font-bold mb-8 text-center text-black">Let's talk</h1>
-      <p className="text-center mb-2">
-        Fill out the form or write to us at:{' '}
-        <a href="mailto:contact@cybermindworks.com">
-          contact@cybermindworks.com
-        </a>
-      </p> */}
         </div>
 
         <form className="contact-form">
@@ -106,34 +100,53 @@ export default function ContactForm() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="company" className="form-label">
-              Company <span className="required">*</span>
+            <label htmlFor="applying position" className="form-label">
+              Applying Position<span className="required">*</span>
             </label>
             <input
               type="text"
-              id="company"
-              name="company"
-              value={formData.company}
+              id="name"
+              name="name"
+              value={formData.applying}
+              onChange={handleChange}
+              placeholder="Front-End,Back-End,UI/UX,Testing etc"
+              className="form-input"
+              required
+            />
+          </div>
+           
+           <div className="form-group">
+            <label htmlFor="resume" className="form-label">
+              Resume URL<span className="required">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.resume}
+              onChange={handleChange}
+              placeholder="URL to your resume document"
+              className="form-input"
+              required
+            />
+          </div>
+
+             <div className="form-group">
+            <label htmlFor="link" className="form-label">
+              Link to LinkedIn<span className="required">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.link}
               onChange={handleChange}
               className="form-input"
               required
             />
           </div>
 
-          {/* <div className="form-group">
-            <label htmlFor="message" className="form-label">
-              Message <span className="required">*</span>
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows={4}
-              className="form-textarea"
-              required
-            ></textarea>
-          </div> */}
+         
 
           <div className="submit-container">
             <button
@@ -141,7 +154,7 @@ export default function ContactForm() {
               onClick={handleSubmit}
               className="submit-button"
             >
-              Send
+              Apply
             </button>
           </div>
         </form>

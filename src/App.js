@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import Enterprise from "../src/assets/EnterpriseScale.png"
+import realTimeApp from "../src/assets/realTimeApp.png"
+import interactive from "../src/assets/interactive.png"
+import dataHeavy from "../src/assets/dataHeavy.png"
+import blazingFast from '../src/assets/blazingFast.png'
+import awardWinning from '../src/assets/awardWinning.webp'
+import yCombinator from '../src/assets/yCombinator.png'
+import farmyungAward from '../src/assets/farmyngAward.webp'
 import './App.css';
+import ContactForm from './pages/Contact';
+import Careers from './pages/Careers';
+import WhyUs from './pages/WhyUs';
 
 function App() {
   return (
@@ -7,7 +18,13 @@ function App() {
       <Header />
       <HeroSection />
       <WorksSection />
-      <Footer />
+      <CardsContainer />
+      <ContactForm />
+      <Careers />
+      <AppscaleRecognition />
+      <WhyUs />
+      <IdeaSection />
+      <Footer /> 
     </div>
   );
 }
@@ -38,11 +55,12 @@ function Header() {
             </a>
             {servicesOpen && (
               <ul className="dropdown-menu">
-                <li><a href="#web-apps">Web Appst</a></li>
+                <li><a href="#web-apps">Web Apps</a></li>
                 <li><a href="#mobile-apps">Mobile Apps</a></li>
               </ul>
             )}
-          </li>
+          </li> 
+                  
           
           <li className="nav-item dropdown">
             <a href="#products" onClick={(e) => {
@@ -52,7 +70,7 @@ function Header() {
               Products 
               <svg className="dropdown-icon" width="16" height="16" viewBox="0 0 24 24">
                 <path d="M7 10l5 5 5-5H7z" />
-              </svg>
+              </svg> 
             </a>
             {productsOpen && (
               <ul className="dropdown-menu">
@@ -78,10 +96,10 @@ function HeroSection() {
       <div className="hero-content">
         <h1 className="hero-title">
           Get a software for your business that is 
-          <span className="gradient-text"> Secure.</span>
-          <span className="gradient-text"> Fast.</span>
-          <span className="gradient-text"> Scalable.</span>
-           <span className="gradient-text"> Reliable.</span>
+          <span className="gradient-text">Fast<br /></span>
+          <span className="gradient-text">Reliable <br /></span>
+          <span className="gradient-text"> Scalable<br /></span>
+           <span className="gradient-text"><br /></span>
         </h1>
         
         <p className="hero-subtitle">
@@ -92,7 +110,7 @@ function HeroSection() {
         <div className="trusted-by">
           <p>Trusted by</p>
           <div className="trusted-logo">
-            <img src="/y-combinator.svg" alt="Y Combinator" />
+            <img src={yCombinator} alt="Y Combinator" />
             <p>founders</p>
           </div>
         </div>
@@ -101,93 +119,120 @@ function HeroSection() {
   );
 }
 const projectsData = {
+  enterprise: [
+      {
+        title: '5 Million + leads in CRM',
+        description: 'Slick application with complex tailor made business reports rendered in seconds - all while munching huge amounts of dataicon',
+        image: Enterprise,
+      },
+      {
+        title:'Near real-time Lead Prioritization',
+        description:'Get an agent assigned to your hot leads in few seconds all while running complicated lead assignment and prioritization algorithms',
+         image: Enterprise,
+    },
+    {
+        title:'360 degree tracking across products',
+        description:'Track every activity of a lead - website visits, form fills, inbound calls, emails, social media ads and more..',
+         image: Enterprise,
+    }
+    ],
     learning: [
       {
         title: 'Coding Judge, Audio/Video tests',
         description:'We built a platform that can host MCQs, Coding questions, Audio, Video (Listening, Reading tests), File submission.',
-        image: '/EnterpriseScale.png',
+        image: realTimeApp ,
       },
       {
         title: 'Student skill profilling',
         description: 'Complete skills profiling of a student, areas of strength/weakness. Suggestions to improve the same.',
-        image: '/lead-dashboard.png',
+        image: realTimeApp,
       },
       {
         title: 'AI integrated- GPT 3.5',
         description: 'Automated creation of question banks, assessment of subjective questions, and crafting individualized reports for students.',
-        image: '/tracking-dashboard.png',
+        image: realTimeApp,
       },
     ],
     interactive: [
       {
         title: 'Realtime multi user collaborative editor',
         description: 'Google docs like interactivity and notion like interface built into one.',
-       image: '/hackathon.png',
-       isSpecialLayout: true,
+       image: interactive,
+      //  isSpecialLayout: true,
       },
       {
         title:'Not just Text',
         description:'Editor supports MCQs, Coding editor and many such components built according to client’s needs',
+        image:interactive,
       },
       {
         title:'Version control, Auto save and more...',
         description:'WebRTC based editor, very fast. Supports large number of users. Content exportable as E-Books, PPT, Webpage.',
+        image:interactive,
       },
     ],
-    // You can add projects for other categories as needed
-    enterprise: [
-      {
-        title: '5 Million + leads in CRM',
-        description: 'Slick application with complex tailor made business reports rendered in seconds - all while munching huge amounts of dataicon',
-        image: '/EnterpriseScale.png',
-      },
-      {
-        title:'Near real-time Lead Prioritization',
-        description:'Get an agent assigned to your hot leads in few seconds all while running complicated lead assignment and prioritization algorithms',
-    },
-    {
-        title:'360 degree tracking across products',
-        description:'Track every activity of a lead - website visits, form fills, inbound calls, emails, social media ads and more..',
-    }
-    ],
+    // // You can add projects for other categories as needed
+    // enterprise: [
+    //   {
+    //     title: '5 Million + leads in CRM',
+    //     description: 'Slick application with complex tailor made business reports rendered in seconds - all while munching huge amounts of dataicon',
+    //     image: Enterprise,
+    //   },
+    //   {
+    //     title:'Near real-time Lead Prioritization',
+    //     description:'Get an agent assigned to your hot leads in few seconds all while running complicated lead assignment and prioritization algorithms',
+    //      image: Enterprise,
+    // },
+    // {
+    //     title:'360 degree tracking across products',
+    //     description:'Track every activity of a lead - website visits, form fills, inbound calls, emails, social media ads and more..',
+    //      image: Enterprise,
+    // }
+    // ],
     data: [
       {
         title: '100,000,000 + records migrated',
         description:'Handling large amounts of data, we have migrated entire data store for a client with very minimal infra cost',
-       image: '/data-analytics.png',
+       image: dataHeavy,
       },
       {
         title: 'Tera bytes of fast data movement ',
         description:'We optimised data movement,running custom scripts,fine tuning infrastructure-completing migration in less than 48 hours',
+        image: dataHeavy,
       },
 ],
     blazing: [
       {
         title: 'Millions of visits',
         description:'We have built websites that handle millions of visitors, while still operating at peak performance',
+        image: blazingFast,
     },
     {
         title:'Lightning speed - 90 + score',
-        description:"We have bulit websites that have consistency ranked hign in google page audits"
+        description:"We have bulit websites that have consistency ranked hign in google page audits",
+        image: blazingFast,
     },
     {
         title:'Crazy Optimization',
         description:'We implemented optimization techniques - lazy loading, dynamic image optimization, gzip compression & leveraged JAM stack',
+        image:blazingFast,
     },
     ],
     award: [
       {
         title: 'Recognized by Google',
         description:'We were trained by Google in partnership with the Ministry of Electronics and Information Technology - Appscale academy',
-        image: '/flutter-app.png',
+        image: awardWinning,
       },
       {
         title:'National News coverage',
         description:'Our association with Google Appscale academy was conveyed in all major new-pappers ',
+        image: awardWinning,
       },
       {
         title:'Loved by Users',
         description:'4 + star rated and downloade by more than 10,000 users in playstore',
+        image: awardWinning,
       },
     ],
   };
@@ -258,7 +303,7 @@ function WorksSection() {
             {projects[activeSlide]?.isSpecialLayout ? (
               <div className="hackathon-display">
                 <div className="hackathon-main">
-                  <img src="/interactive.png" alt="24 Hour Programming Hackathon" />
+                  <img src="C:\cybermind\assets\EnterpriseScale.png" alt="24 Hour Programming Hackathon" />
                 </div>
                 <div className="hackathon-details">
                   <img src="/hackathon-card.png" alt="Hackathon Details" />
@@ -329,86 +374,193 @@ function WorksSection() {
     </section>
   );
 }
+ 
 
+const Card = ({ title, images, features }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  
+  return (
+    <div 
+      className="w-full max-w-md bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative overflow-hidden h-64">
+        <div 
+          className="transition-transform duration-1000 ease-in-out"
+          style={{ 
+            transform: isHovered ? 'translateY(-50%)' : 'translateY(0)',
+            height: '200%'
+          }}
+        >
+          {/* First image */}
+          <div className="h-64 w-full">
+            <img 
+              src="/api/placeholder/400/320" 
+              alt={`${title} preview 1`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          {/* Second image (revealed on hover) */}
+          <div className="h-64 w-full">
+            <img 
+              src="/api/placeholder/400/320" 
+              alt={`${title} preview 2`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+      
+      <div className="px-6 py-4">
+        <h2 className="text-xl font-bold mb-4">{title}</h2>
+        
+        <div className="flex flex-wrap gap-2 mb-2">
+          {features.map((feature, index) => (
+            <span 
+              key={index} 
+              className="px-3 py-1 bg-gray-100 text-gray-800 text-sm font-medium rounded-full"
+            >
+              {feature}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+ function CardsContainer() {
+  const cardsData = [
+    {
+      title: "Demo Portal",
+      features: ["Realtime Matching", "Calendar sync", "Notifications", "Reports"],
+      images: ["/api/placeholder/400/320", "/api/placeholder/400/320"]
+    },
+    {
+      title: "Freelance platform",
+      features: ["Freelance Directory", "Custom Quotation", "Track Progress", "Rating & Reviews"],
+      images: ["/api/placeholder/400/320", "/api/placeholder/400/320"]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {cardsData.map((card, index) => (
+            <Card 
+              key={index}
+              title={card.title}
+              features={card.features}
+              images={card.images}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+function AppscaleRecognition() {
+  return (
+    <div className="appscale-container">
+      <div className="award-card">
+        <img src={farmyungAward} alt="Appscale Academy Award" className="award-image" />
+      </div>
+      <p className="description-text">
+        Our project, <span className="highlight">Farmyng Club</span>, has been acknowledged<br />
+        by Google's Appscale Academy.
+      </p>
+    </div>
+  );
+};
+
+
+function IdeaSection () {
+  return (
+    <section className="idea-section">
+      <h2 className="idea-title">Have an idea?</h2>
+      <p className="idea-description">
+        Need help in turning your idea into a successful product? <br />
+        Talk to us. We can help you build your product quickly and <br />
+        ensure it can scale infinitely.
+      </p>
+      <button className="idea-button">Get Free Consulting</button>
+    </section>
+  );
+};
+
+
+    
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          {/* <img src="/logo.svg" alt="CyberMind Works Logo" className="logo" /> */}
-          <h2 className="logo-text">CyberMind Works</h2>
         </div>
         
         <div className="footer-links">
+          <div className='link-column'>
+            <h3>About Us</h3>
+            <ul>
+              <li>< a href='#why us'>Why Us</a></li>
+               <li>< a href='#privacy terms'>Privacy Terms</a></li>
+            </ul>
+          </div>
           <div className="link-column">
             <h3>Portfolio</h3>
-            <ul>
+             <ul>
               <li><a href="#sales crm">Sales CRM</a></li>
-              <li><a href="#marketing jobverse">Marketing Jobverse</a></li>
-              <li><a href="#uthsav">Uthsav</a></li>
-              <li><a href="#learning platform">Learning platform</a></li>
-              <li><a href="#profitabill">Profitabill</a></li>
-              <li><a href="#baabee">Baabee Tv</a></li>
+             <li><a href="#marketing jobverse">Marketing Jobverse</a></li>
+             <li><a href="#uthsav">Uthsav</a></li>
+             <li><a href="#learning platform">Learning platform</a></li>
+             <li><a href="#profitabill">Profitabill</a></li>
+               <li><a href="#baabee">Baabee Tv</a></li>
               <li><a href="#inesh">Inesh</a></li>
-              <li><a href="#political">Political App</a></li>
-              <li><a href="#farmyung club app">Farmyng Club App</a></li>
+                <li><a href="#political">Political App</a></li>
+             <li><a href="#farmyung club app">Farmyng Club App</a></li>
             </ul>
-          </div>
+           </div>
           
           <div className="link-column">
-            <h3>Offerings</h3>
-            <ul>
-              <li><a href="#Products">Products</a></li>
-              <li><a href="#Services">Services</a></li>
+             <h3>Offerings</h3>
+          <ul>
+         <li><a href="#Products">Products</a></li>
+               <li><a href="#Services">Services</a></li>
               <li><a href="#Web App">Web App</a></li>
-              <li><a href="# Development">Development</a></li> 
-              <li><a href="#Mobile App">Mobile App </a></li>
-              <li><a href="#Development">Development</a></li>
-            </ul>
+           <li><a href="# Development">Development</a></li> 
+            <li><a href="#Mobile App">Mobile App </a></li>
+             <li><a href="#Development">Development</a></li>
+           </ul>
           </div>
           <div className="link-column">
-            <h3>Careers</h3>
-            <ul>
-              <li><a href="#">We are hiring!</a></li>
-            </ul>
-          </div>
+           <h3>Careers</h3>
+           <ul>
+           <li><a href="#">We are hiring!</a></li>
+             </ul>
+         </div>
           
-          <div className="link-column">
-            <h3>CyberMind Works LLp</h3>
-            <ul>
-              <li><a href="mailto:info@cybermindworks.com">CyberMind Works LLP 10/15, 
-                K.M Towers - 1st Floor, Chakrapani Road,
-                Guindy, Chennai, Tamil Nadu, 60004</a></li>
-              <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
-              <li className="social-links">
-                <a href="#twitter" aria-label="Twitter">
-                  <svg viewBox="0 0 24 24" width="20" height="20">
-                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-                  </svg>
-                </a>
-                <a href="#linkedin" aria-label="LinkedIn">
-                  <svg viewBox="0 0 24 24" width="20" height="20">
-                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
-                    <rect x="2" y="9" width="4" height="12" />
-                    <circle cx="4" cy="4" r="2" />
-                  </svg>
-                </a>
-                <a href="#github" aria-label="GitHub">
-                  <svg viewBox="0 0 24 24" width="20" height="20">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+         <div className="link-column">
+           <h1>CyberMind Works LLP</h1>
+             <ul>
+              <li><a href="mailto:info@cybermindworks.com"><br /> 
+                 10/15 K.M Towers - 1st Floor, Chakrapani Road,<br />
+              Guindy, Chennai, Tamil Nadu, 60004</a></li>
+              <li><a href="tel:+1234567890">ph: +01 75000 53535</a></li>
+               <li><a href='#'>www.cybermindworks.com</a></li>
+             <li><a href="mailto:info@cybermindworks.com">contact@cybermindworks.com</a></li>
+          </ul> 
         </div>
       </div>
-      
-      <div className="copyright">
-        <p>&copy; 2025 CyberMind Works. All rights reserved.</p>
-      </div>
-    </footer>
-  );
-}
+    </div>
+<div className="copyright">
+     <p>Copyright © 2025, CyberMind Works | All rights reserved.</p>
+    </div>
+  </footer>
+);
+ }
 
-export default App;
+ export default App;
