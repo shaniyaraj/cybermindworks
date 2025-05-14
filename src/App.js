@@ -11,6 +11,9 @@ import './App.css';
 import ContactForm from './pages/Contact';
 import Careers from './pages/Careers';
 import WhyUs from './pages/WhyUs';
+import Farmyng, { LocalizedNewsFeed, Overview } from "../src/pages/Farmyng";
+
+// import main2 from '../src/assets/main2.png'
 
 function App() {
   return (
@@ -18,7 +21,9 @@ function App() {
       <Header />
       <HeroSection />
       <WorksSection />
-      <CardsContainer />
+      <Farmyng />
+      <Overview />
+      <LocalizedNewsFeed />
       <ContactForm />
       <Careers />
       <AppscaleRecognition />
@@ -171,24 +176,6 @@ const projectsData = {
         image:interactive,
       },
     ],
-    // // You can add projects for other categories as needed
-    // enterprise: [
-    //   {
-    //     title: '5 Million + leads in CRM',
-    //     description: 'Slick application with complex tailor made business reports rendered in seconds - all while munching huge amounts of dataicon',
-    //     image: Enterprise,
-    //   },
-    //   {
-    //     title:'Near real-time Lead Prioritization',
-    //     description:'Get an agent assigned to your hot leads in few seconds all while running complicated lead assignment and prioritization algorithms',
-    //      image: Enterprise,
-    // },
-    // {
-    //     title:'360 degree tracking across products',
-    //     description:'Track every activity of a lead - website visits, form fills, inbound calls, emails, social media ads and more..',
-    //      image: Enterprise,
-    // }
-    // ],
     data: [
       {
         title: '100,000,000 + records migrated',
@@ -375,95 +362,6 @@ function WorksSection() {
   );
 }
  
-
-const Card = ({ title, images, features }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  
-  return (
-    <div 
-      className="w-full max-w-md bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className="relative overflow-hidden h-64">
-        <div 
-          className="transition-transform duration-1000 ease-in-out"
-          style={{ 
-            transform: isHovered ? 'translateY(-50%)' : 'translateY(0)',
-            height: '200%'
-          }}
-        >
-          {/* First image */}
-          <div className="h-64 w-full">
-            <img 
-              src="/api/placeholder/400/320" 
-              alt={`${title} preview 1`}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          
-          {/* Second image (revealed on hover) */}
-          <div className="h-64 w-full">
-            <img 
-              src="/api/placeholder/400/320" 
-              alt={`${title} preview 2`}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </div>
-      
-      <div className="px-6 py-4">
-        <h2 className="text-xl font-bold mb-4">{title}</h2>
-        
-        <div className="flex flex-wrap gap-2 mb-2">
-          {features.map((feature, index) => (
-            <span 
-              key={index} 
-              className="px-3 py-1 bg-gray-100 text-gray-800 text-sm font-medium rounded-full"
-            >
-              {feature}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
- function CardsContainer() {
-  const cardsData = [
-    {
-      title: "Demo Portal",
-      features: ["Realtime Matching", "Calendar sync", "Notifications", "Reports"],
-      images: ["/api/placeholder/400/320", "/api/placeholder/400/320"]
-    },
-    {
-      title: "Freelance platform",
-      features: ["Freelance Directory", "Custom Quotation", "Track Progress", "Rating & Reviews"],
-      images: ["/api/placeholder/400/320", "/api/placeholder/400/320"]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {cardsData.map((card, index) => (
-            <Card 
-              key={index}
-              title={card.title}
-              features={card.features}
-              images={card.images}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-
 function AppscaleRecognition() {
   return (
     <div className="appscale-container">
