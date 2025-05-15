@@ -21,6 +21,8 @@ import freelance1 from './assets/freelance1.png';
 import freelance2 from './assets/freelance2.png';
 import Profitabill,{Review,Features,CallToAction} from './pages/Profitabill';
 import MobileAppOverview from './pages/Mobile';
+import OurWorks from './pages/OurWorks';
+import Blog from './pages/Blog';
 
 // import aatchitamizh from './assets/aatchitamizhlogo.webp';
 // import BB from './assets/BBlogo.png';
@@ -45,6 +47,7 @@ function App() {
       <Header />
       <HeroSection />
       <WorksSection />
+      <OurWorks />
       <Farmyng />
       <Overview />
       <LocalizedNewsFeed />
@@ -65,7 +68,8 @@ function App() {
       <WhyUs />
       <Services />
       <IdeaSection />
-      <Footer /> 
+      <Blog />
+      <Footer />
     </div>
   );
 }
