@@ -43,7 +43,7 @@
 }
 
 .feature-image img {
-  max-width: 100%;
+  max-width: 550px;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -65,7 +65,10 @@
 .feature-text p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
+  letter-spacing: 1px;
+  color: #7c7b7b;
+  font-weight: 600px;
+
 }
 
 

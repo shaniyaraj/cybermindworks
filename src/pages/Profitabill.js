@@ -54,12 +54,12 @@ const Features = () => {
           <img src={advancedBilling} alt="Advanced Billing" />
         </div>
         <div className="feature-text">
-          <h2>Advanced billing</h2>
-          <p>
-            Simple yet powerful billing interface. We allow searching customers, creating customers,
-            bill products, bill services, bill memberships, give custom discount, redeem reward points –
-            all in one single page. The customers get their invoice via SMS with built-in feedback form.
-            Now the owners get to know immediately if the customers are not satisfied.
+          <h2 style={{paddingLeft:'100px'}}>Advanced billing</h2>
+          <p style={{paddingLeft:'100px'}}>
+            Simple yet powerful billing interface. We allow <br /> searching customers, creating customers,
+            bill<br /> products, bill services, bill memberships, give <br />custom discount, redeem reward points –
+            all in one<br /> single page. The customers get their invoice via SMS<br /> with built-in feedback form.
+            Now the owners get to <br /> know immediately if the customers are not satisfied.
           </p>
         </div>
       </section>
@@ -70,24 +70,24 @@ const Features = () => {
         <div className="feature-text">
           <h2>Intelligent Reports</h2>
           <p>
-            We know that businesses need reports & analytics to take data driven decisions for their business.
-            We hence built a comprehensive dashboard that gives useful insights for the business owners.
-            Reports include best selling services by gender, heat map of customers visit time,
-            month on month revenue growth and so on.
+            We know that businesses need reports & analytics<br /> to take data driven decisions for their business.
+            We <br />hence built a comprehensive dashboard that gives <br/>useful insights for the business owners.
+            Reports <br />include best selling services by gender, heat map of <br />customers visit time,
+            month on month revenue <br />growth and so on.
           </p>
         </div>
       </section>
 
         <section className="feature-section reverse">
         <div className="feature-text">
-          <h2>Marketing Engine</h2>
-          <p>
-            We noticed that businesses often rely on external marketing softwares even for the simple needs.
+          <h2 style={{paddingLeft:'100px'}}>Marketing Engine</h2>
+          <p style={{paddingLeft:'100px'}}>
+            We noticed that businesses often rely on external<br /> marketing softwares even for the simple needs.<br />
              Hence we went ahead and built a marketing engine <br />
             that is contextual. Here we allow business to 
-            <br />target their customer segments like ActiveCustomers,
+            target<br /> their customer segments like ActiveCustomers,
             <br /> InActive Customers etc. This targeting 
-            <br />greatly improves the success of their marketing campaigns 
+            greatly <br />improves the success of their marketing campaigns 
             <br />and all this happens in just 3 Steps.
           </p>
         </div>
