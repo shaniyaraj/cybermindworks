@@ -88,9 +88,9 @@
 }
 
 .overview-text {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #666;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 30px;
 }
 
@@ -104,20 +104,40 @@
 } 
 .phone-container {
   flex: 1;
-  display: flex;
+  display: flex ;
   justify-content: center;
   /* max-width: 400px; */
 } 
-
+.phone{
+  flex: 1;
+  display: flex-end;
+}
 .img{
-  width: 100%;
+  width: 500px;
   margin: auto;
-  height:90vh;
+  height:80vh;
   max-width: 100%;
   /* max-height: 100%; */
   /* border-radius: 30px;  */
   /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); */
 }
+.imag2{
+   width: 500px;
+  margin: auto;
+  height:80vh;
+  max-width: 100%;
+}
+.imag3{
+   width: 500px;
+  margin: auto;
+  height:80vh;
+  max-width: 100%;
+ 
+}
+.imag4{
+
+}
+
 
 .text-container {
   flex: 1;
@@ -125,23 +145,65 @@
   /* max-width: 600px; */
 }
 
-.heading {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #222;
-}
-
 .highlight {
-  background: linear-gradient(90deg, #d4145a, #fbb03b);
+  background: linear-gradient(to right, rgb(134, 54, 248), rgb(240, 32, 179), rgb(248, 71, 94), rgb(255, 148, 33));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+} 
+
+
+.font-heading{
+  font-size: 50px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color:black;
+  margin-bottom: 1rem;
+}
+.description{
+  color:#666;
+  font-size: 19px;
+  letter-spacing: 1px;
+  line-height: 1.45; 
+
 }
 
-.description {
-  font-size: 18px;
-  color: #555;
-  line-height: 1.6;
+.cta-wrapper {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
 }
 
-
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #141c2b;
+  margin-bottom: 1.5rem;
+}
+ .cta-button {
+  background-color: #0d0d11;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+   transition: 0.3s ease-in;
+}  
+/* .contact-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+} */
+.cta-button:hover {
+  /* background-color: #1a1a1f; */
+  transform: scale(1.1);
+}

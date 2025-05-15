@@ -11,9 +11,33 @@ import './App.css';
 import ContactForm from './pages/Contact';
 import Careers from './pages/Careers';
 import WhyUs from './pages/WhyUs';
-import Farmyng, { LocalizedNewsFeed, Overview } from "../src/pages/Farmyng";
+ import Farmyng, { LocalizedNewsFeed,ListingPage,MarketPage,AgriPage, Overview ,Callbutton} from "../src/pages/Farmyng";
 
 // import main2 from '../src/assets/main2.png'
+import Services from './pages/Services';
+import demo1 from '../src/assets/demo1.png';
+import demo2 from '../src/assets/demo2.png';
+import freelance1 from './assets/freelance1.png';
+import freelance2 from './assets/freelance2.png';
+import Profitabill,{Review,Features,CallToAction} from './pages/Profitabill';
+import MobileAppOverview from './pages/Mobile';
+
+// import aatchitamizh from './assets/aatchitamizhlogo.webp';
+// import BB from './assets/BBlogo.png';
+// import captain from './assets/captainLogo.webp';
+// import DMK from './DmkLogo.webp';
+// import farmyng from './farmyngclub.png';
+// import hyperlaunch from './assets/hyperlaunch.png';
+// import inesh from './assets/inesh.webp';
+// import ivb from './ivbLogo.jpg';
+// import jobzshala from './assets/jobzshala.png';
+// import moneyrush from './assets/MoneyRushLogo.webp';
+// import ovhqlogo from './ovhqlogo.png';
+// import sarkarias from './sarakariaslogo.png';
+// import schoolnet from './schoolnetLogo.webp';
+// import skilllync from './skillLyncLogo.png';
+
+
 
 function App() {
   return (
@@ -24,10 +48,22 @@ function App() {
       <Farmyng />
       <Overview />
       <LocalizedNewsFeed />
+      <ListingPage />
+      <MarketPage />
+      <AgriPage /> 
+      <Callbutton />
+     <Profitabill />
+      <Review />
+      <Features />
+      <CallToAction /> 
+      <MobileAppOverview />
+      {/* <BrandCarousel />
+      <CardsContainer /> */}
       <ContactForm />
       <Careers />
       <AppscaleRecognition />
       <WhyUs />
+      <Services />
       <IdeaSection />
       <Footer /> 
     </div>
@@ -362,6 +398,179 @@ function WorksSection() {
   );
 }
  
+// function BrandCarousel() {
+//   // Array of brand data with logos and names
+  //  const brands = [
+  //   { name: "Acework Engineers", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=Acework" },
+  //   { name: "Sarkar IAS Academy", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=Sarkar" },
+  //    { name: "Inesh", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=Inesh" },
+  //    { name: "Captain Fresh", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=Captain+Fresh" },
+  //    { name: "DMK", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=DMK" },
+  //    { name: "IAS Study Circle", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=IAS" },
+  //   { name: "EVB", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=EVB" },
+  //   { name: "MoneyRush", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=MoneyRush" },
+  //   { name: "Overqualified Housewives", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=Overqualified" },
+  //    { name: "JobzShala", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=JobzShala" },
+  //   { name: "TechFlow", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=TechFlow" },
+  //  { name: "GreenLeaf", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=GreenLeaf" },
+  //   { name: "BlueOcean", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=BlueOcean" },
+  //   { name: "RedPeak", logo: "https://via.placeholder.com/150x60/f8f9fa/212529?text=RedPeak" },
+  //  ];
+
+  // const [position, setPosition] = useState(0);
+  
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setPosition((prevPosition) => {
+  //       if (prevPosition <= -100) {
+  //         return 0;
+  //       }
+  //       return prevPosition - 0.5;
+  //     });
+  //   }, 50);
+    
+//     return () => clearInterval(interval);
+//   }, []);
+  
+//   const displayBrands = [...brands, ...brands];
+  
+//   return (
+//     <div className="flex flex-col items-center w-full bg-gray-50 py-12 overflow-hidden">
+//       <h1 className="text-4xl font-bold text-gray-800 mb-12">Brands that trust us.</h1>
+      
+//       <div className="relative w-full overflow-hidden">
+//         <div 
+//           className="flex items-center" 
+//           style={{ 
+//             transform: `translateX(${position}%)`,
+//             transition: position === 0 ? 'none' : 'transform 0.5s linear',
+//             width: '200%' // Make the container twice as wide for seamless looping
+//           }}
+//         >
+//           {displayBrands.map((brand, index) => (
+//             <div 
+//               key={index} 
+//               className="flex-none px-6 flex items-center justify-center"
+//               style={{ width: '7.14%' }} // 100% / 14 brands = ~7.14% per brand
+//             >
+//               <img 
+//                 src={brand.logo} 
+//                 alt= {`${brand.name} logo`}
+//                 className="max-h-16 max-w-full object-contain"
+//               />
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+      
+//       <div className="absolute bottom-0 left-0 right-0">
+//         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" className="w-full">
+//           <path 
+//             fill="#FFFFFF" 
+//             fillOpacity="1" 
+//             d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+//           ></path>
+//         </svg>
+//       </div>
+//     </div>
+//   );
+// }
+
+const Card = ({ title, images, features }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  
+  return (
+    <div 
+      className="w-full max-w-md bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative overflow-hidden h-64">
+        <div 
+          className="transition-transform duration-1000 ease-in-out"
+          style={{ 
+            transform: isHovered ? 'translateY(-50%)' : 'translateY(0)',
+            height: '200%'
+          }}
+        >
+          {/* First image */}
+          <div className="h-64 w-full">
+            <img 
+              src="/api/placeholder/400/320" 
+              alt={`${title} preview 1`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          {/* Second image (revealed on hover) */}
+          <div className="h-64 w-full">
+            <img 
+              src="/api/placeholder/400/320" 
+              alt={`${title} preview 2`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+      
+      <div className="px-6 py-4">
+        <h2 className="text-xl font-bold mb-4">{title}</h2>
+        
+        <div className="flex flex-wrap gap-2 mb-2">
+          {features.map((feature, index) => (
+            <span 
+              key={index} 
+              className="px-3 py-1 bg-gray-100 text-gray-800 text-sm font-medium rounded-full"
+            >
+              {feature}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+ function CardsContainer() {
+  const cardsData = [
+    {
+      title: "Demo Portal",
+      images: [demo1, demo2],
+      features: ["Realtime Matching", "Calendar sync", "Notifications", "Reports"],
+    },
+    {
+      title: "Freelance platform",
+      images: [freelance1, freelance2],
+      features: ["Freelance Directory", "Custom Quotation", "Track Progress", "Rating & Reviews"],
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {cardsData.map((card, index) => (
+            <Card 
+              key={index}
+              title={card.title}
+              features={card.features}
+              images={card.images}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// const ServicesSection = () => {
+//   return (
+//     <div>
+//       <Services />
+//     </div>
+//   );
+// };
+
 function AppscaleRecognition() {
   return (
     <div className="appscale-container">

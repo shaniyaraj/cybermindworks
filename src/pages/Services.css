@@ -1,0 +1,59 @@
+.services-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.services-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.services-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.services-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.services-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex: 1;
+}
+
+.service-card {
+  position: relative;
+  flex: 1;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+}
+
+.service-card  img:hover {
+  transform: scale(1.1);
+  transition: 0.3 ease-in-out;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  padding: 10px;
+  margin: 0;
+}
+
+.service-card p {
+  padding: 0 10px 10px 10px;
+  color: #555;
+}
+

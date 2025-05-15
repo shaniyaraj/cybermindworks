@@ -1,6 +1,9 @@
 import React from "react";
 import banner2 from "../assets/banner2.png";
 import feeds from "../assets/feeds.webp";
+import listingPage from  "../assets/listingPage.webp"
+import marketplace from "../assets/marketplace.webp"
+import agri from "../assets/agri.webp"
 import "./Farmyng.css"; // Import the CSS file
 
 const Farmyng = () => {
@@ -21,47 +24,129 @@ const Farmyng = () => {
 };
 
 
-const Overview = () => {
-  return (
-    <section className="overview-section">
+ const Overview = () => {
+   return (
+     <section className="overview-section">
       <h2 className="overview-title">Overview</h2>
-      <p className="overview-text">
-        Farmyng Club is agri land platform that connects farmers with industries, agents and common people.
-        Its the first ever app in India to comeup with the concept of contract farming. Its multilingual and 
-        aimed at attracting farmers all over India. Its currently only available as a mobile app in android and iOS platform.
-        Future plans include supporting farmers with cutting edge technology like IoT enabled sensors, farming equipments,
+     <p className="overview-text">
+       Farmyng Club is agri land platform that connects farmers with industries, agents and common people.Its<br />
+        the first ever app in India to comeup with the concept of contract farming. Its multilingual and 
+        aimed at<br /> attracting farmers all over India. Its currently only available as a mobile app in android and iOS platform.<br />
+        Future plans include supporting farmers with cutting edge technology like IoT enabled sensors, farming<br /> equipments,
         B2B marketplace and more.
-      </p>
-    </section>
-  );
-};
+     </p>
+     </section>
+   );
+ };
 
 
 
 const LocalizedNewsFeed = () => {
-  return (
+ return (
     <div className="localized-container">
-      <div className="phone-container">
-        <img src={feeds} alt="App Screenshot" className="img" />
-      </div>
+     <div className="phone-container">
+       <img src={feeds} alt="App Screenshot" className="img" />
+  </div>
 
       <div className="text-container">
-        <h2 className="heading">
-          <span className="highlight">Localized</span> news feed
-        </h2>
-        <p className="description">
-          Farmyng Club provides a highly personalized (& localized) feed for
-          every farmer. This takes into account the preferences of the farmer,
-          location, language and the crops that they are growing.
+        <h1 className="font-heading">
+         <span className="highlight">Localized</span> news feed
+        </h1>
+       <p className="description">
+          Farmyng Club provides a highly personalized (& <br />
+          localized) feed for every farmer. This takes into <br />
+          account the preferences of the farmer,location,<br />
+           language and the crops that they are growing.
         </p>
+      </div>
+      </div>
+);
+ };
+
+const ListingPage= () => {
+ return (
+    <div className="localized-container">
+      <div className="text-container">
+        <h1 className="font-heading">
+         <span className="highlight">Listing Page</span> for all
+        </h1>
+       <p className="description">
+          Every farmer gets a free landing page listing their <br />
+          crops, products & services offered. They can share <br /> 
+          this page with others and generate leads for his <br />
+          business.
+        </p>
+      </div>
+      <div className="phone">
+        <img src={listingPage} alt="App Screenshot" className="imag2"  />
       </div>
     </div>
   );
 };
 
+function MarketPage() {
+  return (
+    // <div className=" localizied-container">
+    //   <div className="phone-container">
+    //     <img src={marketplace} alt="App Screenshot" className="imag3" />
+    //   </div>
+    //   <div className="text-container">
+    //     <h1 className="font-heading">
+    //       <span className="highlight">Marketplace <br /> </span>Products & services
+    //     </h1>
+    //     <p className="description">
+    //       Farmyng Club offers a peer to peer marketplace<br />
+    //        where anyone can offer a product or a service.
+    //     </p>
+    //   </div>
+      <div className="localized-container">
+     <div className="phone-container">
+       <img src={feeds} alt="App Screenshot" className="img" />
+  </div>
 
+      <div className="text-container">
+        <h1 className="font-heading">
+         <span className="highlight">Localized</span> news feed
+        </h1>
+       <p className="description">
+          Farmyng Club provides a highly personalized (& <br />
+          localized) feed for every farmer. This takes into <br />
+          account the preferences of the farmer,location,<br />
+           language and the crops that they are growing.
+        </p>
+      </div>
+      </div>
+  );
+}
 
+ function AgriPage() {
+  return (
+    <div className=" localizied-container">
+      <div className="text-container">
+        <h1 className="font-heading">
+          <span className="highlight">Agri Product </span>,<br /> buy at 0% commission 
+        </h1>
+        <p className="description">
+          Every farmer gets a free landing page listing their <br />
+          crops, products & services offered. They can share <br />
+          this page with others and generate leads for his business.
+        </p>
+      </div>
+      <div className="phone-container">
+        <img src={agri} alt="App Screenshot" className="img" />
+      </div>
+    </div>
+  );
+}
 
+  const Callbutton = () => {
+    return (
+      <div className="cta-wrapper">
+        <h2 className="cta-title">Want a similar app?</h2>
+        <button className="cta-button">Talk to us now!</button>
+      </div>
+    );
+  };
  
 
 
@@ -69,4 +154,8 @@ const LocalizedNewsFeed = () => {
 export default Farmyng;
 export { Overview };
 export {LocalizedNewsFeed} ;
+export {ListingPage};
+export{MarketPage};
+export {AgriPage};
+export {Callbutton};
 
