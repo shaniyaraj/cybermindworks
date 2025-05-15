@@ -86,33 +86,18 @@ const ListingPage= () => {
 
 function MarketPage() {
   return (
-    // <div className=" localizied-container">
-    //   <div className="phone-container">
-    //     <img src={marketplace} alt="App Screenshot" className="imag3" />
-    //   </div>
-    //   <div className="text-container">
-    //     <h1 className="font-heading">
-    //       <span className="highlight">Marketplace <br /> </span>Products & services
-    //     </h1>
-    //     <p className="description">
-    //       Farmyng Club offers a peer to peer marketplace<br />
-    //        where anyone can offer a product or a service.
-    //     </p>
-    //   </div>
       <div className="localized-container">
      <div className="phone-container">
-       <img src={feeds} alt="App Screenshot" className="img" />
+       <img src={marketplace} alt="App Screenshot" className="img" />
   </div>
 
       <div className="text-container">
         <h1 className="font-heading">
-         <span className="highlight">Localized</span> news feed
-        </h1>
+         <span className="highlight">Marketplace </span>- Products & services
+         </h1>
        <p className="description">
-          Farmyng Club provides a highly personalized (& <br />
-          localized) feed for every farmer. This takes into <br />
-          account the preferences of the farmer,location,<br />
-           language and the crops that they are growing.
+          Farmyng Club offers a peer to peer marketplace<br />
+           where anyone can offer a product or a service.<br />
         </p>
       </div>
       </div>
@@ -121,21 +106,24 @@ function MarketPage() {
 
  function AgriPage() {
   return (
-    <div className=" localizied-container">
+  
+      <div className="localized-container">
       <div className="text-container">
         <h1 className="font-heading">
-          <span className="highlight">Agri Product </span>,<br /> buy at 0% commission 
+         <span className="highlight">Agri Product </span>, buy at 0% commission
         </h1>
-        <p className="description">
-          Every farmer gets a free landing page listing their <br />
-          crops, products & services offered. They can share <br />
-          this page with others and generate leads for his business.
+       <p className="description">
+          Users can purchase products, services from other <br />
+          members of Farmyng Club with no brokerage fee. All <br />
+          leads are passed on to the owner completely free of cost.
         </p>
       </div>
-      <div className="phone-container">
-        <img src={agri} alt="App Screenshot" className="img" />
+      <div className="phone">
+        <img src={agri} alt="App Screenshot" className="imag2"  />
       </div>
     </div>
+      
+      
   );
 }
 
