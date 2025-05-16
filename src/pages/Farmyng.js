@@ -70,7 +70,7 @@ const ListingPage= () => {
         <h1 className="font-heading">
          <span className="highlight">Listing Page</span> for all
         </h1>
-       <p className="description">
+        <p className="description">
           Every farmer gets a free landing page listing their <br />
           crops, products & services offered. They can share <br /> 
           this page with others and generate leads for his <br />
@@ -119,7 +119,7 @@ function MarketPage() {
         </p>
       </div>
       <div className="phone">
-        <img src={agri} alt="App Screenshot" className="imag2"  />
+        <img src={agri} alt="App Screenshot" className="imag4"  />
       </div>
     </div>
       

@@ -68,9 +68,7 @@
   letter-spacing: 1px;
   color: #7c7b7b;
   font-weight: 600px;
-
 }
-
 
 .cta-wrapper {
   text-align: center;
@@ -102,51 +100,49 @@
   transform: scale(1.1);
 }
 
-
 .profitabill-hero {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-   /* padding: 5rem 4rem;  */
-   background:rgb(204, 201, 201);
+  padding: 30px;
+  background-color: #f7f7f7;
   position: relative;
   overflow: hidden;
-  height: 500px;
-  padding-left: 80px;
-  width: auto;
+  max-height: 75vh;
 }
 
 .profitabill-text {
   flex: 1;
   z-index: 2;
-  /* padding-left: 100px; */
-}x
+}
 
 .profitabill-text h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #2e2e2e;
-  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .profitabill-text p {
-  font-size: 1.8rem;
-  color: #333;
-  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #000000;
 }
 
 .profitabill-images {
   flex: 2;
-  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  align-items: center;
+  gap: 5px;
+  position: relative;
+  transform: rotate(-15deg); /* slight perspective tilt */
+  right: -60px;
 }
 
-.box1{
-    width: 600px;
-    height:400px;
-    border-radius: 1.2rem;
+.box1 {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: rgba(0,0,0,0.1);
+  border-radius: 20px;
+  transform: rotate(15deg); /* reverse tilt to upright individual images */
+  transition: transform 0.3s ease;
 }
-
 

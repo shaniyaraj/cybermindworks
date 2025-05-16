@@ -59,7 +59,7 @@
   padding: 60px 0;              /* Remove horizontal padding */
   background-color: #fff;
   text-align: center;
-  width: 100vw;                 /* Full viewport width */
+  width: 99vw;                 /* Full viewport width */
   margin: 0;                    /* Ensure no default margin */
 }
 
@@ -101,6 +101,7 @@
 .whyus-column {
   display: flex;
   flex-direction: column;
+  margin-left: 60px;
   gap: 70px;
   flex: 1;
   min-width: 300px;

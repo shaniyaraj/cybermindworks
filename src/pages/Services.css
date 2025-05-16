@@ -1,59 +1,70 @@
 .services-container {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.services-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.services-overall-content {
   display: flex;
-  flex-direction: row;
-  padding: 20px;
-  align-items: flex-start;
+  flex-direction: row; /* Align text and cards side by side */
+  justify-content: space-between; /* Space out the items */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .services-text {
-  flex: 1;
-  padding-right: 20px;
-}
-
-.services-text h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.services-text p {
-  font-size: 1rem;
-  line-height: 1.5;
+  flex: 1; /* Allow the text to take available space */
+  max-width: 400px; /* Set max width for the text */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+  margin-right: 5px; /* Spacing between text and cards */
 }
 
 .services-cards {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Stack cards vertically */
   gap: 20px;
-  flex: 1;
+  max-width: 900px;
 }
 
 .service-card {
-  position: relative;
-  flex: 1;
   border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
 }
 
 .service-card img {
-  width: 100%;
-  height: auto;
-}
-
-.service-card  img:hover {
-  transform: scale(1.1);
-  transition: 0.3 ease-in-out;
+  width: 150%;
+  height: 400px;
+  object-fit: cover;
 }
 
 .service-card h3 {
   font-size: 1.5rem;
   padding: 10px;
   margin: 0;
+  color: #1f2937;
+  text-align: left;
 }
 
 .service-card p {
   padding: 0 10px 10px 10px;
   color: #555;
+  font-weight: 600;
+  text-align: left;
 }
-

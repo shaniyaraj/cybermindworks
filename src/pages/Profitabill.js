@@ -41,10 +41,6 @@ const Review = () => {
    );
  };
 
-
-
-
-
 const Features = () => {
   return (
     <div className="features-wrapper">

@@ -98,7 +98,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 40px;
+  padding: 60px 60px;
   background-color: #fff;
   flex-wrap: wrap;
 } 
@@ -122,9 +122,9 @@
   /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); */
 }
 .imag2{
-   width: 500px;
+  width: 500px;
   margin: auto;
-  height:80vh;
+  height:75vh;
   max-width: 100%;
 }
 .imag3{
@@ -135,7 +135,11 @@
  
 }
 .imag4{
-
+ width: 500px;
+  margin: auto;
+  height:80vh;
+  max-width: 100%;
+ 
 }
 
 
